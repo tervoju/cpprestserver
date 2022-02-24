@@ -5,16 +5,6 @@
     LI_SYMBOL(json_key)
 #endif
 
-#ifndef LI_SYMBOL_my_param
-#define LI_SYMBOL_my_param
-    LI_SYMBOL(my_param)
-#endif
-
-#ifndef LI_SYMBOL_my_param2
-#define LI_SYMBOL_my_param2
-    LI_SYMBOL(my_param2)
-#endif
-
 #ifndef LI_SYMBOL_name
 #define LI_SYMBOL_name
     LI_SYMBOL(name)

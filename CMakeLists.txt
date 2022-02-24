@@ -10,6 +10,7 @@ find_package(Threads REQUIRED)
 
 find_package(OpenSSL REQUIRED)
 find_package(Boost REQUIRED context)
+pkg_search_module(JSONCPP jsoncpp)
 
 include_directories(${CURL_INCLUDE_DIRS} ${OPENSSL_INCLUDE_DIR})
 
@@ -25,7 +26,8 @@ include_directories(${LITHIUM_HEADER_DIR})
 
 set(LIBS ${CURL_LIBRARIES} 
          ${Boost_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT}
-         ${OPENSSL_LIBRARIES})
+         ${OPENSSL_LIBRARIES} 
+         ${JSONCPP_LIBRARIES})
 
 add_executable(testserver testserver.cpp)
 # Link the symbol generation to your cmake target:
